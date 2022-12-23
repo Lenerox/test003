@@ -41,7 +41,7 @@ namespace ConnectingToSQLServer
                 Console.ForegroundColor = ConsoleColor.White;
                 num0 = OdczytNum();
                 querStr00 = Disp_tab(allColumnsSchemaTable, nazwy0[num0]);
-                querStr01 = "SELECT " + querStr00 + " FROM dbo." + nazwy0[num0] + "; ";
+                querStr01 = "SELECT " + querStr00 + " FROM dbo.[" + nazwy0[num0] + "]; ";
 
                 Console.WriteLine(".............................................................");
                 SqlCommand command0 = new SqlCommand(querStr01, connection);//Wywala się na nazwach ze spacją...
