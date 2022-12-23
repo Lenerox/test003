@@ -199,10 +199,10 @@ namespace ConnectingToSQLServer
             {
 
                 //Console.WriteLine("{2,-15}", row.TableCatalog, row.TableSchema, row.TableName, row.ColumnName, row.DataType);
-                t_name0 = row.TableName.ToString();
+                t_name0 = row.TableName.ToString()+"";
                 if (i == 0)
                 {
-                    t_name[i] = row.TableName.ToString();
+                    t_name[i] = t_name0;
                     i++;
                 }
                 else
@@ -210,7 +210,7 @@ namespace ConnectingToSQLServer
                     if (t_name0 != t_name[i - 1])
                     {
                         Array.Resize(ref t_name, t_name.Length + 1);
-                        t_name[i] = row.TableName.ToString();
+                        t_name[i] = t_name0;
                         i++;
                     }
                 }
@@ -249,7 +249,7 @@ namespace ConnectingToSQLServer
                 if (row.TableName.ToString()==datbas0)
                 {
                     Array.Resize(ref t_name, t_name.Length + 1);
-                    t_name[i] = row.ColumnName.ToString();
+                    t_name[i] = row.ColumnName.ToString()+"";
                     i++;
                 }
                             }
@@ -280,7 +280,7 @@ namespace ConnectingToSQLServer
             int lp = 0;
             try
             {
-                lp = Int16.Parse(Console.ReadLine());
+                lp = Int16.Parse(Console.ReadLine()+"");
             }
             catch
             {
